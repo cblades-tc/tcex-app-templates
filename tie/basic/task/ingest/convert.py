@@ -24,7 +24,6 @@ class Convert(TaskPathPipeABC):
         """Run the task."""
         self.tcex.log.info(f'event=convert, action=running-task, request_id={request_id}')
         self.request = self.job_dao.get(request_id)
-        self.writing_service.request = self.request
         self.process_files(
             input_dir,
             output_dir,
