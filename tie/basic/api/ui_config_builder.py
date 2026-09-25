@@ -383,7 +383,7 @@ class UIConfigBuilder(UIConfigBuilderABC):
     def settings_form(self):
         """Connection first — what the engine is pointed at, before what it does with it.
 
-        Ingestion leads the editable sections: it is what an operator came to change.
+        Jobs leads the editable sections: it is what an operator came to change.
         """
         return [
             {
@@ -399,7 +399,7 @@ class UIConfigBuilder(UIConfigBuilderABC):
                 'fields': self.connection_inputs(),
             },
             {
-                'name': 'Ingestion',
+                'name': 'Jobs',
                 'description': (
                     'Controls what this engine ingests, and how much related context is '
                     'brought in with it.'
