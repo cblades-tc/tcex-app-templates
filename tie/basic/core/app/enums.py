@@ -73,11 +73,6 @@ except ImportError:
     ConfigResource = None
 
 try:
-    from core.api.endpoint.tcve.preview_config_resource import PreviewConfigResource
-except ImportError:
-    PreviewConfigResource = None
-
-try:
     from core.api.endpoint.tcve.tc_info_resource import TcInfoResource
 except ImportError:
     TcInfoResource = None
@@ -248,7 +243,6 @@ class ROUTES(Enum):
         NOTIFICATION = Route('/api/notification', NotificationCollection)
         APP_CONFIG = Route('/api/tc/app-config', TcAppConfig)
         TC_CONFIG = Route('/api/tc-info', TcInfoResource)
-        PREVIEW_CONFIG = Route('/api/tql-config/preview', PreviewConfigResource)
 
         SETTINGS = Route('/api/settings', SettingsResource)
         SETTINGS_REVISIONS = Route('/api/settings/revisions', SettingsRevisionsResource)
